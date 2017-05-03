@@ -56,8 +56,12 @@ class DestUrlParse:
         other = self.other_dest()
         for item in other:
             inner.append(item)
-        print(inner)
+        url_list = []
+        for index in inner:
+            url_list.append(index["cityUrl"])
+        print(len(url_list))
         return inner
+
 
 
 if __name__ == "__main__":
@@ -73,6 +77,6 @@ if __name__ == "__main__":
     #     w_file.write(page_code)
     #     w_file.close()
     destUrlParse = DestUrlParse(page_code)
-    pdb = pdbc.PDBC()
+    # pdb = pdbc.PDBC()
     result = destUrlParse.main()
-    pdb.insert_dest(result)
+    # pdb.insert_dest(result)

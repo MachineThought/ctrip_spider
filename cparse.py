@@ -9,7 +9,8 @@ class CtripParse:
     def __init__(self, page_source, parse_type="html.parser"):
         self.cbs = BeautifulSoup(page_source, parse_type)
         self.message = {"result": "success", "data": ""}
-        self.data = {"name": "", "price": "", "score": "", "scoreLevel": "", "commNum": "", "travelNum": "", "service": "", "provider": ""}
+        self.data = {"itemId": "", "name": "", "price": "", "score": "", "scoreLevel": "", "commNum": "", "travelNum": "", "service": "",
+                     "provider": ""}
 
     # 临时读取页面的方法,主要用于测试
     def read_file(self, path):
@@ -31,6 +32,17 @@ class CtripParse:
             return False
         else:
             return True
+
+    def __item_id(self):
+        cbs = self.cbs
+        try:
+            item_id = cbs.find(id="TrackProductId")
+            print(item_id)
+            if self.check(item_id):
+                item_id = item_id["value"]
+                self.data["itemId"] = item_id
+        except Exception as err:
+            print(err)
 
     # 解析页面标题
     def __parse_title(self):
@@ -127,6 +139,7 @@ class CtripParse:
 
     # main方法，用来测试
     def main(self):
+        self.__item_id()
         self.__parse_title()
         self.__parse_price()
         self.__parse_comm()
@@ -140,12 +153,13 @@ if __name__ == "__main__":
     with open('page/ctrip.html', 'r', encoding='utf-8') as source_file:
         page_code = source_file.read()
         source_file.close()
-    firefox = webdriver.Firefox()
-    firefox.get("http://vacations.ctrip.com/morelinetravel/p17185842s2.html?kwd=%E4%B8%89%E4%BA%9A")
-    time.sleep(1)
-    page_code = firefox.page_source
-    with open('page/ctrip2.html', 'w', encoding='utf-8') as w_file:
-        w_file.write(page_code)
-        w_file.close()
+    # firefox = webdriver.Firefox()
+    # firefox.get("http://vacations.ctrip.com/morelinetravel/p17185842s2.html?kwd=%E4%B8%89%E4%BA%9A")
+    # time.sleep(1)
+    # page_code = firefox.page_source
+    # with open('page/ctrip.html', 'w', encoding='utf-8') as w_file:
+    #     w_file.write(page_code)
+    #     w_file.close()
+    # print(page_code)
     ctripParse = CtripParse(page_code)
     ctripParse.main()
