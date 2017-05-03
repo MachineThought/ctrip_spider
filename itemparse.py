@@ -135,9 +135,9 @@ if __name__ == "__main__":
                   'http://vacations.ctrip.com/tours/r-dongnanya-110', 'http://vacations.ctrip.com/tours/r-nanya-109',
                   'http://vacations.ctrip.com/tours/r-europe-120002', 'http://vacations.ctrip.com/tours/r-meizhou-102',
                   'http://vacations.ctrip.com/tours/r-axnt-114', 'http://vacations.ctrip.com/tours/r-zhongdongfei-113']
-chrome = webdriver.Chrome()
-# firefox = webdriver.Firefox()
-# firefox.find_element_by_id("").text
-for url in dest_url:
-    itemParse = ItemParse(url, chrome)
-    itemParse.main()
+    chrome = webdriver.Chrome()
+    # firefox = webdriver.Firefox()
+    # firefox.find_element_by_id("").text
+    for url in dest_url:
+        itemParse = ItemParse(url, chrome)
+        itemParse.main()
