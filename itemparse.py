@@ -76,15 +76,15 @@ if __name__ == "__main__":
                 'http://vacations.ctrip.com/tours/s-sanya-10558612', 'http://vacations.ctrip.com/tours/s-sanya-10558611',
                 'http://vacations.ctrip.com/tours/s-sanya-88071', 'http://vacations.ctrip.com/tours/s-sanya-10558614',
                 'http://vacations.ctrip.com/tours/s-sanya-10524171', 'http://vacations.ctrip.com/tours/d-xishaqundao-530',
-                'http://vacations.ctrip.com/tours/d-xiamen-21', 'http://vacations.ctrip.com/tours/d-fuzhou-164']
-    dest_url_2 = ['http://vacations.ctrip.com/tours/d-gulangyu-120058', 'http://vacations.ctrip.com/tours/s-longyan-13293683',
-                  'http://vacations.ctrip.com/tours/d-wuyishan-22', 'http://vacations.ctrip.com/tours/s-xiamen-91537',
-                  'http://vacations.ctrip.com/tours/s-xiamen-79124', 'http://vacations.ctrip.com/tours/s-najing-90729',
-                  'http://vacations.ctrip.com/tours/d-lijiang-32', 'http://vacations.ctrip.com/tours/d-kunming-29',
-                  'http://vacations.ctrip.com/tours/d-xianggelila-106', 'http://vacations.ctrip.com/tours/d-xishuangbanna-30',
-                  'http://vacations.ctrip.com/tours/d-luguhu-105', 'http://vacations.ctrip.com/tours/d-tengchong-696',
-                  'http://vacations.ctrip.com/tours/d-ruili-1213', 'http://vacations.ctrip.com/tours/s-lijiang-75919',
-                  'http://vacations.ctrip.com/tours/d-dali-31', 'http://vacations.ctrip.com/tours/d-honghe-512']
+                'http://vacations.ctrip.com/tours/d-xiamen-21', 'http://vacations.ctrip.com/tours/d-fuzhou-164',
+                'http://vacations.ctrip.com/tours/d-gulangyu-120058', 'http://vacations.ctrip.com/tours/s-longyan-13293683',
+                'http://vacations.ctrip.com/tours/d-wuyishan-22', 'http://vacations.ctrip.com/tours/s-xiamen-91537',
+                'http://vacations.ctrip.com/tours/s-xiamen-79124', 'http://vacations.ctrip.com/tours/s-najing-90729',
+                'http://vacations.ctrip.com/tours/d-lijiang-32', 'http://vacations.ctrip.com/tours/d-kunming-29',
+                'http://vacations.ctrip.com/tours/d-xianggelila-106', 'http://vacations.ctrip.com/tours/d-xishuangbanna-30',
+                'http://vacations.ctrip.com/tours/d-luguhu-105', 'http://vacations.ctrip.com/tours/d-tengchong-696',
+                'http://vacations.ctrip.com/tours/d-ruili-1213', 'http://vacations.ctrip.com/tours/s-lijiang-75919',
+                'http://vacations.ctrip.com/tours/d-dali-31', 'http://vacations.ctrip.com/tours/d-honghe-512']
     dest_url_3 = ['http://vacations.ctrip.com/tours/d-guilin-28', 'http://vacations.ctrip.com/tours/s-guilin-75898',
                   'http://vacations.ctrip.com/tours/d-beihai-140', 'http://vacations.ctrip.com/tours/d-yangshuo-702',
                   'http://vacations.ctrip.com/tours/d-nanning-166', 'http://vacations.ctrip.com/tours/d-longjititian-970',
@@ -141,3 +141,4 @@ if __name__ == "__main__":
     for url in dest_url:
         itemParse = ItemParse(url, chrome)
         itemParse.main()
+    print("end")
