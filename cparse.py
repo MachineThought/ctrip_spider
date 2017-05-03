@@ -37,7 +37,7 @@ class CtripParse:
         cbs = self.cbs
         try:
             item_id = cbs.find(id="TrackProductId")
-            print(item_id)
+            # print(item_id)
             if self.check(item_id):
                 item_id = item_id["value"]
                 self.data["itemId"] = item_id
