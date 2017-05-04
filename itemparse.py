@@ -97,43 +97,42 @@ if __name__ == "__main__":
                     'http://vacations.ctrip.com/tours/d-wuyishan-22', 'http://vacations.ctrip.com/tours/s-xiamen-91537',
                     'http://vacations.ctrip.com/tours/s-xiamen-79124', 'http://vacations.ctrip.com/tours/s-najing-90729']
     dest_url_2 = ['http://vacations.ctrip.com/tours/d-lijiang-32', 'http://vacations.ctrip.com/tours/d-kunming-29',
-                  'http://vacations.ctrip.com/tours/d-xianggelila-106','http://vacations.ctrip.com/tours/d-guilin-28',
+                  'http://vacations.ctrip.com/tours/d-xianggelila-106', 'http://vacations.ctrip.com/tours/d-guilin-28',
                   'http://vacations.ctrip.com/tours/d-xishuangbanna-30']
     # xishuangbanna p6  r-axnt-114/p19
-    server_1 = [
-                  'http://vacations.ctrip.com/tours/d-luguhu-105', 'http://vacations.ctrip.com/tours/d-tengchong-696',
-                  'http://vacations.ctrip.com/tours/d-ruili-1213', 'http://vacations.ctrip.com/tours/s-lijiang-75919',
-                  'http://vacations.ctrip.com/tours/d-dali-31', 'http://vacations.ctrip.com/tours/d-honghe-512',
-                  'http://vacations.ctrip.com/tours/s-guilin-75898',
-                  'http://vacations.ctrip.com/tours/d-beihai-140', 'http://vacations.ctrip.com/tours/d-yangshuo-702',
-                  'http://vacations.ctrip.com/tours/d-nanning-166', 'http://vacations.ctrip.com/tours/d-longjititian-970',
-                  'http://vacations.ctrip.com/tours/d-weizhouisland-120063', 'http://vacations.ctrip.com/tours/d-jiuzhaigou-25',
-                  'http://vacations.ctrip.com/tours/d-chengdu-104', 'http://vacations.ctrip.com/tours/d-emeishan-24',
-                  'http://vacations.ctrip.com/tours/d-leshan-103', 'http://vacations.ctrip.com/tours/d-qingchengshan-143879',
-                  'http://vacations.ctrip.com/tours/d-hailuogou-705', 'http://vacations.ctrip.com/tours/d-dujiangyan-911',
-                  'http://vacations.ctrip.com/tours/d-aba-744', 'http://vacations.ctrip.com/tours/d-danba-704',
-                  'http://vacations.ctrip.com/tours/d-daocheng-342', 'http://vacations.ctrip.com/tours/d-xilingxueshan-1484',
-                  'http://vacations.ctrip.com/tours/s-beijing-75594', 'http://vacations.ctrip.com/tours/s-beijing-75595',
-                  'http://vacations.ctrip.com/tours/s-beijing-75598', 'http://vacations.ctrip.com/tours/s-beijing-10523549',
-                  'http://vacations.ctrip.com/tours/s-beijing-75597', 'http://vacations.ctrip.com/tours/s-yanqing-75596',
-                  'http://vacations.ctrip.com/tours/s-beijing-76681', 'http://vacations.ctrip.com/tours/s-beijing-75599']
+    server_1 = ['http://vacations.ctrip.com/tours/d-luguhu-105', 'http://vacations.ctrip.com/tours/d-tengchong-696',
+                'http://vacations.ctrip.com/tours/d-ruili-1213', 'http://vacations.ctrip.com/tours/s-lijiang-75919',
+                'http://vacations.ctrip.com/tours/d-dali-31', 'http://vacations.ctrip.com/tours/d-honghe-512',
+                'http://vacations.ctrip.com/tours/s-guilin-75898',
+                'http://vacations.ctrip.com/tours/d-beihai-140', 'http://vacations.ctrip.com/tours/d-yangshuo-702',
+                'http://vacations.ctrip.com/tours/d-nanning-166', 'http://vacations.ctrip.com/tours/d-longjititian-970',
+                'http://vacations.ctrip.com/tours/d-weizhouisland-120063', 'http://vacations.ctrip.com/tours/d-jiuzhaigou-25',
+                'http://vacations.ctrip.com/tours/d-chengdu-104', 'http://vacations.ctrip.com/tours/d-emeishan-24',
+                'http://vacations.ctrip.com/tours/d-leshan-103', 'http://vacations.ctrip.com/tours/d-qingchengshan-143879',
+                'http://vacations.ctrip.com/tours/d-hailuogou-705', 'http://vacations.ctrip.com/tours/d-dujiangyan-911',
+                'http://vacations.ctrip.com/tours/d-aba-744', 'http://vacations.ctrip.com/tours/d-danba-704',
+                'http://vacations.ctrip.com/tours/d-daocheng-342', 'http://vacations.ctrip.com/tours/d-xilingxueshan-1484',
+                'http://vacations.ctrip.com/tours/s-beijing-75594', 'http://vacations.ctrip.com/tours/s-beijing-75595',
+                'http://vacations.ctrip.com/tours/s-beijing-75598', 'http://vacations.ctrip.com/tours/s-beijing-10523549',
+                'http://vacations.ctrip.com/tours/s-beijing-75597', 'http://vacations.ctrip.com/tours/s-yanqing-75596',
+                'http://vacations.ctrip.com/tours/s-beijing-76681', 'http://vacations.ctrip.com/tours/s-beijing-75599']
     server_2 = ['http://vacations.ctrip.com/tours/d-yantai-170', 'http://vacations.ctrip.com/tours/d-weihai-169',
-                  'http://vacations.ctrip.com/tours/d-jinan-128', 'http://vacations.ctrip.com/tours/d-qingdao-5',
-                  'http://vacations.ctrip.com/tours/d-taishan-6', 'http://vacations.ctrip.com/tours/d-rizhao-622',
-                  'http://vacations.ctrip.com/tours/s-qingdao-85745', 'http://vacations.ctrip.com/tours/d-zaozhuang-656',
-                  'http://vacations.ctrip.com/tours/d-qufu-129', 'http://vacations.ctrip.com/tours/d-penglai-168',
-                  'http://vacations.ctrip.com/tours/d-zaozhuang-143872', 'http://vacations.ctrip.com/tours/d-hangzhou-14',
-                  'http://vacations.ctrip.com/tours/d-shanghaidisneyresort-1446916', 'http://vacations.ctrip.com/tours/d-shanghai-2',
-                  'http://vacations.ctrip.com/tours/d-qiandaohu-17', 'http://vacations.ctrip.com/tours/d-wuzhen-508',
-                  'http://vacations.ctrip.com/tours/d-huangshan-19', 'http://vacations.ctrip.com/tours/d-putuoshan-16',
-                  'http://vacations.ctrip.com/tours/d-nanjing-9', 'http://vacations.ctrip.com/tours/d-suzhou-11',
-                  'http://vacations.ctrip.com/tours/d-wuxi-10', 'http://vacations.ctrip.com/tours/d-xitang-15',
-                  'http://vacations.ctrip.com/tours/d-zhouzhuang-81', 'http://vacations.ctrip.com/tours/d-shaoxing-18',
-                  'http://vacations.ctrip.com/tours/d-changbaishan-268', 'http://vacations.ctrip.com/tours/s-dalian-87618',
-                  'http://vacations.ctrip.com/tours/d-dalian-4', 'http://vacations.ctrip.com/tours/d-changchun-216',
-                  'http://vacations.ctrip.com/tours/d-haerbin-151', 'http://vacations.ctrip.com/tours/d-wudalianchi-857',
-                  'http://vacations.ctrip.com/tours/d-yabuli-815', 'http://vacations.ctrip.com/tours/d-jilin-100031',
-                  'http://vacations.ctrip.com/tours/r-zhongdongfei-113']
+                'http://vacations.ctrip.com/tours/d-jinan-128', 'http://vacations.ctrip.com/tours/d-qingdao-5',
+                'http://vacations.ctrip.com/tours/d-taishan-6', 'http://vacations.ctrip.com/tours/d-rizhao-622',
+                'http://vacations.ctrip.com/tours/s-qingdao-85745', 'http://vacations.ctrip.com/tours/d-zaozhuang-656',
+                'http://vacations.ctrip.com/tours/d-qufu-129', 'http://vacations.ctrip.com/tours/d-penglai-168',
+                'http://vacations.ctrip.com/tours/d-zaozhuang-143872', 'http://vacations.ctrip.com/tours/d-hangzhou-14',
+                'http://vacations.ctrip.com/tours/d-shanghaidisneyresort-1446916', 'http://vacations.ctrip.com/tours/d-shanghai-2',
+                'http://vacations.ctrip.com/tours/d-qiandaohu-17', 'http://vacations.ctrip.com/tours/d-wuzhen-508',
+                'http://vacations.ctrip.com/tours/d-huangshan-19', 'http://vacations.ctrip.com/tours/d-putuoshan-16',
+                'http://vacations.ctrip.com/tours/d-nanjing-9', 'http://vacations.ctrip.com/tours/d-suzhou-11',
+                'http://vacations.ctrip.com/tours/d-wuxi-10', 'http://vacations.ctrip.com/tours/d-xitang-15',
+                'http://vacations.ctrip.com/tours/d-zhouzhuang-81', 'http://vacations.ctrip.com/tours/d-shaoxing-18',
+                'http://vacations.ctrip.com/tours/d-changbaishan-268', 'http://vacations.ctrip.com/tours/s-dalian-87618',
+                'http://vacations.ctrip.com/tours/d-dalian-4', 'http://vacations.ctrip.com/tours/d-changchun-216',
+                'http://vacations.ctrip.com/tours/d-haerbin-151', 'http://vacations.ctrip.com/tours/d-wudalianchi-857',
+                'http://vacations.ctrip.com/tours/d-yabuli-815', 'http://vacations.ctrip.com/tours/d-jilin-100031',
+                'http://vacations.ctrip.com/tours/r-zhongdongfei-113']
     # 'http://vacations.ctrip.com/tours/r-axnt-114',
     dest_url_4 = ['http://vacations.ctrip.com/tours/d-xian-7', 'http://vacations.ctrip.com/tours/d-yanan-423',
                   'http://vacations.ctrip.com/tours/d-huashan-183', 'http://vacations.ctrip.com/tours/s-xian-75682',
@@ -157,7 +156,7 @@ if __name__ == "__main__":
     chrome = webdriver.Chrome()
     # firefox = webdriver.Firefox()
     # firefox.find_element_by_id("").text
-    for url in dest_url_2:
+    for url in server_1:
         itemParse = ItemParse(url, chrome)
         itemParse.main()
     print("end")
