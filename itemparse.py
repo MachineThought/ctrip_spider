@@ -97,8 +97,10 @@ if __name__ == "__main__":
                     'http://vacations.ctrip.com/tours/d-wuyishan-22', 'http://vacations.ctrip.com/tours/s-xiamen-91537',
                     'http://vacations.ctrip.com/tours/s-xiamen-79124', 'http://vacations.ctrip.com/tours/s-najing-90729']
     dest_url_2 = ['http://vacations.ctrip.com/tours/d-lijiang-32', 'http://vacations.ctrip.com/tours/d-kunming-29',
-                  'http://vacations.ctrip.com/tours/d-xianggelila-106']
-    server_1 = ['http://vacations.ctrip.com/tours/d-guilin-28', 'http://vacations.ctrip.com/tours/d-xishuangbanna-30',
+                  'http://vacations.ctrip.com/tours/d-xianggelila-106','http://vacations.ctrip.com/tours/d-guilin-28',
+                  'http://vacations.ctrip.com/tours/d-xishuangbanna-30']
+    # xishuangbanna p6  r-axnt-114/p19
+    server_1 = [
                   'http://vacations.ctrip.com/tours/d-luguhu-105', 'http://vacations.ctrip.com/tours/d-tengchong-696',
                   'http://vacations.ctrip.com/tours/d-ruili-1213', 'http://vacations.ctrip.com/tours/s-lijiang-75919',
                   'http://vacations.ctrip.com/tours/d-dali-31', 'http://vacations.ctrip.com/tours/d-honghe-512',
@@ -131,8 +133,8 @@ if __name__ == "__main__":
                   'http://vacations.ctrip.com/tours/d-dalian-4', 'http://vacations.ctrip.com/tours/d-changchun-216',
                   'http://vacations.ctrip.com/tours/d-haerbin-151', 'http://vacations.ctrip.com/tours/d-wudalianchi-857',
                   'http://vacations.ctrip.com/tours/d-yabuli-815', 'http://vacations.ctrip.com/tours/d-jilin-100031',
-                  'http://vacations.ctrip.com/tours/r-axnt-114', 'http://vacations.ctrip.com/tours/r-zhongdongfei-113']
-
+                  'http://vacations.ctrip.com/tours/r-zhongdongfei-113']
+    # 'http://vacations.ctrip.com/tours/r-axnt-114',
     dest_url_4 = ['http://vacations.ctrip.com/tours/d-xian-7', 'http://vacations.ctrip.com/tours/d-yanan-423',
                   'http://vacations.ctrip.com/tours/d-huashan-183', 'http://vacations.ctrip.com/tours/s-xian-75682',
                   'http://vacations.ctrip.com/tours/s-fufeng-84611', 'http://vacations.ctrip.com/tours/s-qianxian-84602',
