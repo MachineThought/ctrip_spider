@@ -50,3 +50,18 @@ class PDBC:
                 print(err)
         return result
 
+    def insert_detail(self, detail):
+        index = int(self.get_bigger_id("travel_detail"))
+        sql = "insert into travel_detail(id,item_id,`name`,price,score,score_level,comm_num,service,provider,url) " \
+              "values(%d,'%s','%s','%s','%s','%s','%s','%s','%s','%s')" % (index, detail["itemId"], detail["name"],
+                                                                           detail["price"], detail["score"],
+                                                                           detail["scoreLevel"], detail["commNum"], detail["service"],
+                                                                           detail["provider"],
+                                                                           detail["url"])
+        try:
+            self.cursor.execute(sql)
+            self.db.commit()
+        except Exception as err:
+            self.db.rollback()
+            print(err)
+            print(sql)

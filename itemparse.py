@@ -1,6 +1,7 @@
 # *-* utf-8 *-*
 from selenium import webdriver
 from bs4 import BeautifulSoup
+import pdbc
 import cparse
 import re
 import json
@@ -43,37 +44,43 @@ class ItemParse:
         return item_list
 
     def main(self):
+        db = pdbc.PDBC()
         self.page_size_parse()
         index = 2
         page_list = [self.url]
         while index <= int(self.page_size):
             page_list.append(self.url + "/p" + str(index))
             index += 1
-        with open("data/result", 'w', encoding='utf8') as f:
-            for page_item in page_list:
-                print(page_item)
-                self.driver.get(page_item)
-                page = self.driver.page_source
-                travel_list = self.parse_page(page)
-                for travel_item in travel_list:
-                    print(travel_item)
-                    self.driver.get(travel_item)
-                    time.sleep(1)
+        for page_item in page_list:
+            print(page_item)
+            self.driver.get(page_item)
+            page = self.driver.page_source
+            travel_list = self.parse_page(page)
+            for travel_item in travel_list:
+                print(travel_item)
+                self.driver.get(travel_item)
+                time.sleep(0.5)
+                temp = ""
+                try:
                     temp = self.driver.find_element_by_id("J_total_price").text
-                    print(temp)
-                    detail_page = self.driver.page_source
-                    cParse = cparse.CtripParse(detail_page)
-                    data = cParse.main()
-                    if data["price"] == "":
-                        data["price"] = temp[temp.find("¥") + 1:temp.find("/")]
-                    print(data)
-                    f.write(str(data) + "\n")
-            f.close()
+                except Exception as terr:
+                    print(terr)
+
+                detail_page = self.driver.page_source
+                cParse = cparse.CtripParse(detail_page)
+                data = cParse.main()
+                if data["price"] == "" and temp != "":
+                    data["price"] = temp[temp.find("¥") + 1:temp.find("/")]
+
+                data["url"] = travel_item
+                print(data)
+                db.insert_detail(data)
 
 
 if __name__ == "__main__":
     dest_url = ['http://vacations.ctrip.com/tours/d-sanya-61', 'http://vacations.ctrip.com/tours/d-haikou-37',
-                'http://vacations.ctrip.com/tours/s-sanya-10558612', 'http://vacations.ctrip.com/tours/s-sanya-10558611',
+                'http://vacations.ctrip.com/tours/s-sanya-10558612',
+                'http://vacations.ctrip.com/tours/s-sanya-10558611',
                 'http://vacations.ctrip.com/tours/s-sanya-88071', 'http://vacations.ctrip.com/tours/s-sanya-10558614',
                 'http://vacations.ctrip.com/tours/s-sanya-10524171', 'http://vacations.ctrip.com/tours/d-xishaqundao-530',
                 'http://vacations.ctrip.com/tours/d-xiamen-21', 'http://vacations.ctrip.com/tours/d-fuzhou-164',

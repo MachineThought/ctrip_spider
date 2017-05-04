@@ -144,7 +144,6 @@ class CtripParse:
         self.__parse_price()
         self.__parse_comm()
         self.__parse_store()
-        print(self.data)
         return self.data
 
 
